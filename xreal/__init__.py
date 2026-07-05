@@ -25,7 +25,8 @@ from .tracker import HeadTracker
 from .fusion import MadgwickAHRS, Madgwick
 from .types import ImuSample, Orientation
 from .protocol import parse_frame, iter_frames, FRAME_LEN, HEADER, SENSOR_TAG
-from .util import wrap_deg, quat_rotate, forward_vector
+from .util import (wrap_deg, quat_rotate, forward_vector,
+                   quat_conjugate, quat_mul, head_angles)
 
 __version__ = "0.1.0"
 
@@ -35,5 +36,6 @@ __all__ = [
     "ImuSample", "Orientation",
     "parse_frame", "iter_frames", "FRAME_LEN", "HEADER", "SENSOR_TAG",
     "wrap_deg", "quat_rotate", "forward_vector",
+    "quat_conjugate", "quat_mul", "head_angles",
     "__version__",
 ]
