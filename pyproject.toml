@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xreal"
+version = "0.1.0"
+description = "Read and fuse the XREAL One IMU stream (6-axis AHRS head tracking, pure stdlib)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "xreal experiments" }]
+keywords = ["xreal", "imu", "ahrs", "madgwick", "head-tracking", "ar"]
+
+# Pure standard library — no runtime dependencies.
+dependencies = []
+
+[project.scripts]
+xreal-track = "xreal.__main__:main"
+
+[tool.setuptools]
+packages = ["xreal"]
